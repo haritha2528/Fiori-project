@@ -30,12 +30,12 @@
                     <VBox>
                     <HBox class="sapUiResponsiveMargin">
                    
-                    <ComboBox id="idcombo3" items="{ path: '/ProductSet' }" placeholder=" Enter Product ID">
+                    <ComboBox id="idcombo3" items="{ path: '/ProductSet' }" placeholder=" Enter Product ID" selectionChange="onChange">
                     <items>
                     <core:Item key="{ProductID}" text="{ProductID}"></core:Item>
                     </items>
                     </ComboBox>
-                    <ComboBox id="idcombo4" items="{ path: '/ProductSet' }" placeholder=" Enter Category" class="sapUiSmallMarginBegin">
+                    <ComboBox id="idcombo4" items="{ path: '/ProductSet' }" placeholder=" Enter Category" class="sapUiSmallMarginBegin" change="onChangeCat">
                     <items>
                     <core:Item key="{Category}" text="{Category}"></core:Item>
                     </items>

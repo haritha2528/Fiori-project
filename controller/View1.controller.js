@@ -29,6 +29,14 @@ sap.ui.define([
                 
             //    ew sap.ui.model.odata.ODataModel();
             //     this.getView().setModel(oDatamodel); var oDatamodel= n
+},
+onChange: function(oEvent){
+    var selText = oEvent.getParameter("selectedItem").getText();
+    var selKey = oEvent.getParameter("selectedItem").getKey();
+},
+onChangeCat : function(oEvent){
+    var selectedText = this.byId("idcombo4").getSelectedItem().getText();
+    var selectedKey = this.byId("idcombo4").getSelectedItem().getKey();
 }
 
 		});
