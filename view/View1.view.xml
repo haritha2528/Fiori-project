@@ -1,0 +1,77 @@
+<mvc:View
+    controllerName="ns.fiori.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+>
+	
+		<App id="app">
+			<pages>
+				<Page id="page" title="{i18n>title}">
+					<content>
+                    <!-- Simple ComboBox  -->
+                    <ComboBox id="cbox1">
+                    <items>
+                    <core:Item key="Item-1-key1" text="Apple" id="item1"/>
+                    <core:Item key="Item-2-key2" text="Orange" id="item2"/>
+                    <core:Item key="Item-3-key3" text="Mango" id="item3"/>
+                    </items>
+                    </ComboBox>
+                    <VBox>
+                     <!-- combobox using json model -->
+                    <ComboBox id="idcbox2"  items="{/comboitem}">
+					<items>
+                    <core:ListItem key="{key}" text="{Name}"/>
+                    </items>
+                    </ComboBox>
+                    <!-- Combo box using odata mobile  -->
+                    </VBox>
+                    <VBox>
+                    <HBox class="sapUiResponsiveMargin">
+                   
+                    <ComboBox id="idcombo3" items="{ path: '/ProductSet' }" placeholder=" Enter Product ID">
+                    <items>
+                    <core:Item key="{ProductID}" text="{ProductID}"></core:Item>
+                    </items>
+                    </ComboBox>
+                    <ComboBox id="idcombo4" items="{ path: '/ProductSet' }" placeholder=" Enter Category" class="sapUiSmallMarginBegin">
+                    <items>
+                    <core:Item key="{Category}" text="{Category}"></core:Item>
+                    </items>
+                    </ComboBox>
+                    <ComboBox id="idcombo5" items="{ path: '/ProductSet' }" placeholder=" Enter Name" class="sapUiSmallMarginBegin">
+                    <items>
+                    <core:Item key="{Name}" text="{Name}"></core:Item>
+                    </items>
+                    </ComboBox>
+                     <ComboBox id="idcombo6" items="{ path: '/ProductSet' }" placeholder=" Enter SupplierID" class="sapUiSmallMarginBegin">
+                    <items>
+                    <core:Item key="{SupplierID}" text="{SupplierID}"></core:Item>
+                    </items>
+                    </ComboBox>
+                     <ComboBox id="idcombo7" items="{ path: '/ProductSet' }" placeholder=" Enter SupplierName" class="sapUiSmallMarginBegin">
+                    <items>
+                    <core:Item key="{SupplierName}" text="{SupplierName}"></core:Item>
+                    </items>
+                    </ComboBox>
+                       <ComboBox id="idcombo8" items="{ path: '/ProductSet' }" placeholder=" Enter Price" class="sapUiSmallMarginBegin">
+                    <items>
+                    <core:Item key="{Price}" text="{Price}"></core:Item>
+                    </items>
+                    </ComboBox>
+                       <ComboBox id="idcombo9" items="{ path: '/ProductSet' }" placeholder=" Enter CurrencyCode" class="sapUiSmallMarginBegin">
+                    <items>
+                    <core:Item key="{CurrencyCode}" text="{CurrencyCode}"></core:Item>
+                    </items>
+                    </ComboBox>
+                    
+
+                    </HBox>
+                    </VBox>
+                    </content>
+				</Page>
+			</pages>
+		</App>
+	
+</mvc:View>
