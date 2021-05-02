@@ -37,7 +37,18 @@ onChange: function(oEvent){
 onChangeCat : function(oEvent){
     var selectedText = this.byId("idcombo4").getSelectedItem().getText();
     var selectedKey = this.byId("idcombo4").getSelectedItem().getKey();
-}
+},
+onhandleitems:function(oEvent){
+    oEvent.getSource().getBinding("items").resume();
+
+},
+
+		handleValueStateLinkPress: function(oEvent) {
+			MessageToast.show("Link in value state pressed");
+		}
+
+    
+
 
 		});
 	});

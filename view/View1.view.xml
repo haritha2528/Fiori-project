@@ -4,12 +4,14 @@
     displayBlock="true"
     xmlns="sap.m"
     xmlns:core="sap.ui.core"
+    xmlns:l="sap.ui.layout"
 >
 	
 		<App id="app">
 			<pages>
 				<Page id="page" title="{i18n>title}">
 					<content>
+                    
                     <!-- Simple ComboBox  -->
                     <ComboBox id="cbox1">
                     <items>
@@ -40,7 +42,7 @@
                     <core:Item key="{Category}" text="{Category}"></core:Item>
                     </items>
                     </ComboBox>
-                    <ComboBox id="idcombo5" items="{ path: '/ProductSet' }" placeholder=" Enter Name" class="sapUiSmallMarginBegin">
+                    <ComboBox id="idcombo5" items="{ path: '/ProductSet' }" placeholder=" Enter Name" class="sapUiSmallMarginBegin" change="onNameChange">
                     <items>
                     <core:Item key="{Name}" text="{Name}"></core:Item>
                     </items>
@@ -65,10 +67,47 @@
                     <core:Item key="{CurrencyCode}" text="{CurrencyCode}"></core:Item>
                     </items>
                     </ComboBox>
-                    
-
                     </HBox>
                     </VBox>
+                    <VBox class="sapUiResponsiveMargin">
+                    <Label text="Combo box in a success state"></Label>
+                    <ComboBox id="idcombobox" valueState="Success" items="{ path: '/ProductSet'}" loadItems="onhandleitems" class="sapUiSmallMarginBottom">
+                    <items>
+                    <core:Item key="{Category}" text="{Category}"></core:Item>
+                    </items>
+                    </ComboBox>
+                    <Label text="Combo box in information state"/>
+                      <ComboBox id="idcombobox1" valueState="Information" items="{ path: '/ProductSet'}" loadItems="onhandleitems" class="sapUiSmallMarginBottom">
+                    <items>
+                    <core:Item key="{Description}" text="{Description}"></core:Item>
+                    </items>
+                    </ComboBox>
+                      <Label text="Information state message with a link" id="idlnflinklab"/>
+                      <ComboBox id="idcombobox3" valueState="Information"	valueStateText="Warning message. Extra long text used as a warning message. Extra long text used as a warning message - 2. Extra long text used as a warning message - 3."
+                      items="{ path: '/BusinessPartnerSet'}" loadItems="onhandleitems" class="sapUiSmallMarginBottom">
+                    <items>
+                    <core:Item key="{CompanyName}" text="{CompanyName}"></core:Item>
+                    </items>
+                    </ComboBox>
+                    </VBox>
+                    <l:VerticalLayout>
+                    <Label text="Combo box in Error State" />
+                      <ComboBox id="idcombobox2" valueState="Error"	
+                      items="{ path: '/BusinessPartnerSet'}" loadItems="onhandleitems" class="sapUiSmallMarginBottom">
+                    <items>
+                    <core:Item key="{BusinessPartnerRole}" text="{BusinessPartnerRole}"></core:Item>
+                    
+                    <!-- <formattedValueStateText>
+                    <FormattedText htmlText="Warning message. Long text used as a warning message with a %%0.">
+                    <controls>
+								<Link text="link" href="" press=".handleValueStateLinkPress" />
+							</controls>
+                    </FormattedText>
+                    </formattedValueStateText> -->
+                    </items>
+                    </ComboBox>
+                     </l:VerticalLayout>
+                  
                     </content>
 				</Page>
 			</pages>
