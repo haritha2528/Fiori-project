@@ -45,7 +45,11 @@ onhandleitems:function(oEvent){
 
 		handleValueStateLinkPress: function(oEvent) {
 			MessageToast.show("Link in value state pressed");
-		}
+        },
+        onpress: function(oEvent){
+           
+
+        }
 
     
 

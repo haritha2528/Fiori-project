@@ -11,7 +11,24 @@
 			<pages>
 				<Page id="page" title="{i18n>title}">
 					<content>
-                    
+                     <Image src="img/logo_sap.png" width="100px" height="90px" class="sapUiSmallMarginBegin" tooltip="Run Simple"/>
+                      <IconTabBar id="idicontabbar" class="sapUiResponsiveContentPadding">
+                      <items>
+                      <IconTabFilter text="Home"/>
+                      <IconTabSeparator />
+                      <IconTabFilter text="SAPUI5Fiori"
+                      ></IconTabFilter>
+                      <IconTabSeparator/>
+                      <IconTabFilter text="ABAP"></IconTabFilter>
+                      <IconTabSeparator/>
+                      <IconTabFilter text="Interview Questions"></IconTabFilter>
+                      <IconTabSeparator/>
+                      <IconTabFilter text="Imp Blogs"></IconTabFilter>
+                      </items>
+                      </IconTabBar>
+                      <OverflowToolbar>
+                      <SearchField width="100%" />
+                      </OverflowToolbar>
                     <!-- Simple ComboBox  -->
                     <ComboBox id="cbox1">
                     <items>
@@ -107,7 +124,8 @@
                     </items>
                     </ComboBox>
                      </l:VerticalLayout>
-                  
+                     <Button type="Emphasized" press="onpress"/>
+                   
                     </content>
 				</Page>
 			</pages>
